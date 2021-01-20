@@ -19,8 +19,8 @@ unset LIQUIBASE_DISABLE_DRIVER_CHECK
 
 echo "Installing sqlite driver"
 # Cribbed from kilna/liquibase-sqlite-docker
-sqlite_jdbc_version=3.20.0
-sqlite_jdbc_download_url=https://bitbucket.org/xerial/sqlite-jdbc/downloads
+sqlite_jdbc_version=3.34.0
+sqlite_jdbc_download_url=https://repo1.maven.org/maven2/org/xerial/sqlite-jdbc/{$sqlite_jdbc_version}
 export LIQUIBASE_CLASSPATH=${LIQUIBASE_CLASSPATH:-/opt/jdbc/sqlite-jdbc.jar}
 export LIQUIBASE_DRIVER=${LIQUIBASE_DRIVER:-org.sqlite.JDBC}
 export LIQUIBASE_URL=${LIQUIBASE_URL:-'jdbc:sqlite:${DATABASE}'}
